@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Collider</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <div class="app">
+
+    <header>
+      <div class="pill-badge">
+        <span class="pill-dot"></span>
+        Idea Collider
+      </div>
+      <h1>Smash ideas,<br>make <span class="highlight">magic</span></h1>
+      <p>Enter two random things. Get 4 wild ideas born from the collision.</p>
+      <div class="examples">
+        <span class="ex-chip" onclick="fillExample('sushi','architecture')">sushi + architecture</span>
+        <span class="ex-chip" onclick="fillExample('yoga','stock market')">yoga + stock market</span>
+        <span class="ex-chip" onclick="fillExample('chess','street food')">chess + street food</span>
+        <span class="ex-chip" onclick="fillExample('sleep','social media')">sleep + social media</span>
+      </div>
+    </header>
+
+    <div class="input-section">
+      <div class="input-row">
+        <div class="input-wrap">
+          <label class="input-label" for="input1">Thing one</label>
+          <input type="text" id="input1" placeholder="e.g. jazz" maxlength="40" />
+        </div>
+        <div class="plus">+</div>
+        <div class="input-wrap">
+          <label class="input-label" for="input2">Thing two</label>
+          <input type="text" id="input2" placeholder="e.g. farming" maxlength="40" />
+        </div>
+      </div>
+
+      <button id="collideBtn" onclick="collide()">
+        ⚡ Collide &amp; Create
+      </button>
+    </div>
+
+    <p class="hint">↩ Press Enter to collide</p>
+
+    <div id="status"></div>
+    <div id="results"></div>
+
+  </div>
+</body>
+</html>
