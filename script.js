@@ -50,7 +50,7 @@ Reply ONLY with a valid JSON array — no explanation, no markdown fences. Just 
 
       try {
         // 5. call the Gemini API
-        const GEMINI_API_KEY = 'AIzaSyDghNONxe2LimIcBdIEV8FJaQr2CPyspV8';
+        const GEMINI_API_KEY = 'PASTE_YOUR_API_KEY_HERE';
 
         const response = await fetch(
           'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY,
