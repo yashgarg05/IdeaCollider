@@ -108,4 +108,4 @@ Reply ONLY with a valid JSON array — no explanation, no markdown fences. Just 
 
       // 11. re-enable button
       btn.disabled = false;
-    
+    }
