@@ -20,8 +20,6 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 3rem 1.5rem 5rem;
       position: relative;
       overflow-x: hidden;
     }
@@ -402,4 +400,487 @@
       font-size: 12px;
       color: #c4bde8;
       margin-top: 10px;
+    }
+
+    /* ── Navigation ── */
+    .custom-navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      padding: 1.2rem 2rem;
+      background: rgba(245, 243, 255, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-brand {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent1);
+    }
+    .btn-sm {
+      padding: 8px 16px;
+      background: var(--accent1);
+      color: white !important;
+      border-radius: 100px;
+      font-weight: 700;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-sm:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(91,63,248,0.3);
+    }
+    
+    /* ── Page Layouts ── */
+    .page-container {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+    .page-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .page-header h2 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      margin-bottom: 10px;
+    }
+    .page-header p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+    
+    /* ── Auth Forms ── */
+    .auth-box {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 40px rgba(91,63,248,0.08);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 16px;
+      color: var(--text);
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-group input:focus {
+      border-color: var(--accent1);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(91,63,248,0.1);
+    }
+    .auth-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--text);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .auth-btn:hover {
+      transform: translateY(-2px);
+      background: var(--accent1);
+    }
+    .auth-link {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .auth-link a {
+      color: var(--accent1);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    
+    /* ── Profile & History ── */
+    .profile-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .avatar {
+      width: 80px; height: 80px;
+      background: var(--accent3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--text);
+    }
+    .profile-info { flex: 1; }
+    .profile-info h3 {
+      font-size: 24px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      margin-bottom: 4px;
+    }
+    .profile-info p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .logout-btn {
+      padding: 8px 16px;
+      background: var(--accent2);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .history-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .history-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.2s;
+    }
+    .history-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(91,63,248,0.08);
+    }
+    .history-date {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .history-words {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--accent1);
+    }
+    .history-idea {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.5;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .history-idea strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 16px;
+    }
+    .about-content {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .about-content h3 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 24px;
+      margin: 1.5rem 0 1rem;
+      color: var(--accent1);
+    }
+    .about-content p {
+      margin-bottom: 1rem;
+    }
+    
+    /* ── Landing Page Enrichments ── */
+    .hero-section {
+      width: 100%;
+      max-width: 800px;
+      margin: 6rem auto 4rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 1.5rem;
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 1.5rem auto 0;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 18px 40px;
+      background: var(--text);
+      color: white;
+      border-radius: 14px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      box-shadow: 0 8px 24px rgba(15,10,46,0.15);
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(15,10,46,0.25);
+      background: var(--accent1);
+    }
+    
+    .features-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 4rem auto 6rem;
+      position: relative;
+      z-index: 1;
+      padding: 0 1.5rem;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-title h2 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .section-title p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(91,63,248,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(91,63,248,0.08);
+    }
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 1.5rem;
+    }
+    .feature-card h3 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .feature-card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    
+    /* ── Footer ── */
+    .site-footer {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      padding: 4rem 1.5rem;
+      text-align: center;
+      margin-top: auto;
+      z-index: 1;
+      position: relative;
+    }
+    .site-footer p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 1.5rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--accent1);
+    }
+    
+    /* ── Showcase Marquee ── */
+    .showcase-section {
+      width: 100vw;
+      margin: 4rem 0 6rem;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow: hidden;
+      padding: 2rem 0;
+      background: linear-gradient(180deg, transparent, rgba(255,255,255,0.4), transparent);
+    }
+    
+    .marquee-wrapper {
+      display: flex;
+      width: max-content;
+      animation: scroll 35s linear infinite;
+    }
+    
+    .marquee-wrapper:hover {
+      animation-play-state: paused;
+    }
+    
+    .marquee-item {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-strong);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 0 1rem;
+      width: 320px;
+      box-shadow: 0 8px 32px rgba(91,63,248,0.05);
+      transition: transform 0.3s, background 0.3s;
+      flex-shrink: 0;
+    }
+    
+    .marquee-item:hover {
+      transform: scale(1.05) translateY(-5px);
+      background: white;
+      z-index: 10;
+    }
+    
+    .marquee-words {
+      font-size: 13px;
+      color: var(--accent1);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .marquee-title {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    
+    .marquee-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* ── Scroll Reveals ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ── Glowing CTA ── */
+    .cta-button {
+      position: relative;
+      z-index: 1;
+    }
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: -3px; left: -3px; right: -3px; bottom: -3px;
+      background: linear-gradient(45deg, var(--accent1), var(--accent2), var(--accent3), var(--accent4));
+      background-size: 300%;
+      border-radius: 16px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s;
+      filter: blur(12px);
+      animation: pulseGlow 4s linear infinite;
+    }
+    .cta-button:hover::after {
+      opacity: 0.85;
+    }
+    
+    @keyframes pulseGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }

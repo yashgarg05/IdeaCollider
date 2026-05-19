@@ -5,55 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Idea Collider</title>
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
 </head>
 <body>
+  <nav class="navbar custom-navbar navbar-expand-lg">
+    <div class="container">
+      <a href="index.html" class="nav-brand"><span class="pill-dot"></span> Idea Collider</a>
+      <div class="nav-links d-flex align-items-center gap-3" id="navLinks">
+        <!-- Injected by nav.js -->
+      </div>
+    </div>
+  </nav>
 
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
   <div class="blob blob3"></div>
 
-  <div class="app">
-
-    <header>
+  <!-- Hero Section -->
+  <section class="hero-section reveal active container text-center pt-5 mt-5">
+    <div class="hero-content mx-auto" style="max-width: 800px;">
       <div class="pill-badge">
         <span class="pill-dot"></span>
-        Idea Collider
+        AI-Powered Brainstorming
       </div>
       <h1>Smash ideas,<br>make <span class="highlight">magic</span></h1>
-      <p>Enter two random things. Get 4 wild ideas born from the collision.</p>
-      <div class="examples">
-        <span class="ex-chip" onclick="fillExample('sushi','architecture')">sushi + architecture</span>
-        <span class="ex-chip" onclick="fillExample('yoga','stock market')">yoga + stock market</span>
-        <span class="ex-chip" onclick="fillExample('chess','street food')">chess + street food</span>
-        <span class="ex-chip" onclick="fillExample('sleep','social media')">sleep + social media</span>
+      <p class="hero-subtitle">The ultimate cure for creative block. Combine completely unrelated concepts to generate ambitious, wild, and brilliant ideas using advanced AI.</p>
+      <div style="margin-top: 2.5rem;">
+        <a href="signup.html" class="cta-button">Get Started for Free →</a>
       </div>
-    </header>
-
-    <div class="input-section">
-      <div class="input-row">
-        <div class="input-wrap">
-          <label class="input-label" for="input1">Thing one</label>
-          <input type="text" id="input1" placeholder="e.g. jazz" maxlength="40" />
-        </div>
-        <div class="plus">+</div>
-        <div class="input-wrap">
-          <label class="input-label" for="input2">Thing two</label>
-          <input type="text" id="input2" placeholder="e.g. farming" maxlength="40" />
-        </div>
-      </div>
-
-      <button id="collideBtn" onclick="collide()">
-        ⚡ Collide &amp; Create
-      </button>
     </div>
+  </section>
 
-    <p class="hint">↩ Press Enter to collide</p>
+  <!-- Showcase Section -->
+  <section class="showcase-section reveal">
+    <div class="section-title">
+      <h2>See the Magic in Action</h2>
+      <p>A few wild ideas born from absolute randomness.</p>
+    </div>
+    <div class="marquee-wrapper">
+      <!-- First Set -->
+      <div class="marquee-item">
+        <div class="marquee-words">Sushi × Architecture</div>
+        <div class="marquee-title">Edible Blueprints</div>
+        <div class="marquee-desc">A restaurant where you design your meal as a structural model before eating it.</div>
+      </div>
+      <div class="marquee-item">
+        <div class="marquee-words">Yoga × Stock Market</div>
+        <div class="marquee-title">ZenTrade</div>
+        <div class="marquee-desc">A trading platform that blocks high-risk trades if your smart watch detects an elevated heart rate.</div>
+      </div>
+      <div class="marquee-item">
+        <div class="marquee-words">Chess × Street Food</div>
+        <div class="marquee-title">Checkmate Churros</div>
+        <div class="marquee-desc">A food cart where you play a 2-minute speed chess game against the chef for a massive discount.</div>
+      </div>
+      <div class="marquee-item">
+        <div class="marquee-words">Sleep × Social Media</div>
+        <div class="marquee-title">DreamFeed</div>
+        <div class="marquee-desc">An app that logs your sleep talk and automatically tweets the funniest out-of-context quotes.</div>
+      </div>
+      <!-- Duplicate Set for Seamless Loop -->
+      <div class="marquee-item">
+        <div class="marquee-words">Sushi × Architecture</div>
+        <div class="marquee-title">Edible Blueprints</div>
+        <div class="marquee-desc">A restaurant where you design your meal as a structural model before eating it.</div>
+      </div>
+      <div class="marquee-item">
+        <div class="marquee-words">Yoga × Stock Market</div>
+        <div class="marquee-title">ZenTrade</div>
+        <div class="marquee-desc">A trading platform that blocks high-risk trades if your smart watch detects an elevated heart rate.</div>
+      </div>
+      <div class="marquee-item">
+        <div class="marquee-words">Chess × Street Food</div>
+        <div class="marquee-title">Checkmate Churros</div>
+        <div class="marquee-desc">A food cart where you play a 2-minute speed chess game against the chef for a massive discount.</div>
+      </div>
+      <div class="marquee-item">
+        <div class="marquee-words">Sleep × Social Media</div>
+        <div class="marquee-title">DreamFeed</div>
+        <div class="marquee-desc">An app that logs your sleep talk and automatically tweets the funniest out-of-context quotes.</div>
+      </div>
+    </div>
+  </section>
 
-    <div id="status"></div>
-    <div id="results"></div>
+  <!-- Features Section -->
+  <section class="features-section reveal container py-5 my-5">
+    <div class="section-title text-center mb-5">
+      <h2>Why use Idea Collider?</h2>
+      <p class="text-muted">Because the best ideas live outside the box.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="feature-card h-100 p-4">
+          
+          <h3>Total Randomness</h3>
+          <p>Give us any two concepts. The more unrelated they are, the better. We thrive on the absurd.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="feature-card h-100 p-4">
+          
+          <h3>AI-Powered Insights</h3>
+          <p>Our fine-tuned LLM forces connections, finding the weird and wonderful overlaps between your concepts.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="feature-card h-100 p-4">
+          
+          <h3>Track Your Genius</h3>
+          <p>Every successful collision is saved to your personal history. Never lose a million-dollar idea again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- Footer -->
+  <footer class="site-footer reveal">
+    <div class="footer-content">
+      <div class="nav-brand" style="justify-content: center; margin-bottom: 12px;"><span class="pill-dot"></span> Idea Collider</div>
+      <p>Stop waiting for inspiration. Force it.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

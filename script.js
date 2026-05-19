@@ -50,7 +50,7 @@ Reply ONLY with a valid JSON array — no explanation, no markdown fences. Just 
 
       try {
         // 5. call the Gemini API
-        const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY_HERE';
+        const GEMINI_API_KEY = 'AIzaSyDghNONxe2LimIcBdIEV8FJaQr2CPyspV8';
 
         const response = await fetch(
           'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY,
@@ -79,6 +79,30 @@ Reply ONLY with a valid JSON array — no explanation, no markdown fences. Just 
         // 7. strip any accidental code fences, parse the JSON array
         const cleaned = text.replace(/```json|```/g, '').trim();
         const ideas   = JSON.parse(cleaned);
+        
+        // Save to localStorage
+        const historyEntry = {
+          date: new Date().toISOString(),
+          word1: word1,
+          word2: word2,
+          ideas: ideas
+        };
+        const past = JSON.parse(localStorage.getItem('history') || '[]');
+        past.unshift(historyEntry);
+        localStorage.setItem('history', JSON.stringify(past));
+        
+        // Update user stats if logged in
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
+          currentUser.totalCollisions = (currentUser.totalCollisions || 0) + 1;
+          localStorage.setItem('currentUser', JSON.stringify(currentUser));
+          
+          const users = JSON.parse(localStorage.getItem('users') || '{}');
+          if (users[currentUser.email]) {
+             users[currentUser.email] = currentUser;
+             localStorage.setItem('users', JSON.stringify(users));
+          }
+        }
 
         // 8. clear loading, show divider label
         results.innerHTML = `
