@@ -1,4 +1,4 @@
-# 💥 Word Collider
+# Word Collider
 
 > Smash two unrelated concepts together — let AI do the creative explosion.
 
@@ -6,24 +6,24 @@
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 > Type `Pizza` + `Blockchain` → Get 4 ideas you never thought of.
 
 ---
 
-## ✨ Features
+## Features
 
-- ⚡ **Instant AI Generation** — Powered by Google Gemini 2.5 Flash
-- 🎨 **4 Idea Categories** — Startup Idea, Art Concept, Product Idea, Wild Concept
-- 🃏 **Card-based UI** — Clean result cards for each generated idea
-- ⌨️ **Keyboard Friendly** — Hit `Enter` anywhere to collide
-- 🔁 **Example Prompts** — Pre-filled word pairs to get you started
-- 🛡️ **Error Handling** — Graceful messages for API or network issues
+- **Instant AI Generation** — Powered by Google Gemini 2.5 Flash
+- **4 Idea Categories** — Startup Idea, Art Concept, Product Idea, Wild Concept
+- **Card-based UI** — Clean result cards for each generated idea
+- **Keyboard Friendly** — Hit `Enter` anywhere to collide
+- **Example Prompts** — Pre-filled word pairs to get you started
+- **Error Handling** — Graceful messages for API or network issues
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -34,7 +34,7 @@
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 word-collider/
@@ -46,7 +46,7 @@ word-collider/
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```
 User types 2 words
@@ -73,7 +73,7 @@ Response is cleaned & parsed as JSON array
 
 ---
 
-## 🔑 Setup & Usage
+## Setup & Usage
 
 ### 1. Clone the repo
 
@@ -112,7 +112,7 @@ open index.html
 
 ---
 
-## ⚠️ Known Limitations
+## Known Limitations
 
 - Requires a valid Gemini API key (free tier available)
 - Gemini occasionally wraps responses in markdown fences — handled automatically
@@ -120,9 +120,9 @@ open index.html
 
 ---
 
-## 🔐 Security Note
+## Security Note
 
-> ⚠️ This project exposes the API key in client-side JavaScript.  
+> This project exposes the API key in client-side JavaScript.  
 > For production, move the API call to a backend server or serverless function to keep the key private.
 
 ---
@@ -133,7 +133,7 @@ MIT License — free to use, modify, and distribute.
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - [Google Gemini API](https://ai.google.dev/) — for the AI magic
 - Inspired by the idea that creativity is just unexpected combinations
